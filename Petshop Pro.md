@@ -24,7 +24,35 @@ et voila !
 
 
 run any directory enumeration tool you like, I used gobuster 
-`gobuster dir -u https://3b71fd43f1fb10e3401857b7bf59ed00.ctf.hacker101.com/  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o petshop.txt`
+
+```
+gobuster dir -u https://3b71fd43f1fb10e3401857b7bf59ed00.ctf.hacker101.com/  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o petshop.txt
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://3b71fd43f1fb10e3401857b7bf59ed00.ctf.hacker101.com/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/07/18 16:10:54 Starting gobuster in directory enumeration mode
+===============================================================
+/login                (Status: 200) [Size: 329]
+/static               (Status: 301) [Size: 169] [--> http://3b71fd43f1fb10e3401857b7bf59ed00.ctf.hacker101.com/static/]                                                                                                                   
+/cart                 (Status: 200) [Size: 410]
+/edit                 (Status: 400) [Size: 167]
+/checkout             (Status: 405) [Size: 153]
+Progress: 32776 / 220561 (14.86%)^C
+[!] Keyboard interrupt detected, terminating.
+
+===============================================================
+2023/07/18 16:31:52 Finished
+===============================================================
+```
 
 found an admin login page at /login
 
